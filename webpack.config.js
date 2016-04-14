@@ -1,6 +1,6 @@
 module.exports = {
     entry: [
-        './src/index.js'
+        './src/components/virts.jsx'
     ],
     output: {
         path: __dirname,
