@@ -19,7 +19,6 @@
     "url": "https://github.com/shadidchowdhury/virtServerNG/issues"
   },
   "homepage": "https://github.com/shadidchowdhury/virtServerNG#readme",
-
   "devDependencies": {
     "babel-core": "^6.2.1",
     "babel-loader": "^6.2.0",
@@ -32,6 +31,7 @@
     "babel-preset-stage-1": "^6.1.18",
     "lodash": "^3.10.1",
     "react": "^0.14.3",
-    "react-dom": "^0.14.3"
+    "react-dom": "^0.14.3",
+    "reflux": "^0.1.13"
   }
 }
