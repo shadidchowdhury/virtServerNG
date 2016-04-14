@@ -30,8 +30,11 @@
   "dependencies": {
     "babel-preset-stage-1": "^6.1.18",
     "backbone-react-ui": "^0.1.8",
+    "griddle-react": "^0.4.1",
+    "immutable": "^3.7.6",
     "lodash": "^3.10.1",
     "react": "^0.14.3",
+    "react-bootstrap": "^0.28.5",
     "react-dom": "^0.14.3",
     "reflux": "^0.1.13",
     "superagent": "git@github.com:fiatjaf/superagent-cors.git#627d8b31cfdf7acbd78e3e5e54c1c0b8dd70f441",
