@@ -6,41 +6,19 @@ var Container = React.createClass({
     handleGetVirts: function() {
        console.log('button clicked')
 
-        //request
-        //    .post('/api/pet')
-        //    .send({ name: 'Manny', species: 'cat' })
-        //    .set('X-API-Key', 'foobar')
-        //    .set('Accept', 'application/json')
-        //    .end(function(err, res){
-        //        if (err || !res.ok) {
-        //            alert('Oh no! error');
-        //        } else {
-        //            alert('yay got ' + JSON.stringify(res.body));
-        //        }
-        //    });
-
-        request
-            .get('http://localhost:8084/login')
-            //.set('Access-Control-Allow-Origin', '*')
-            //.set('Access-Control-Allow-Headers', 'X-Requested-With')
+            request.get('http://localhost:8081/api/v1.1/deployments').auth('defaultUser', 'svp4ever')
+                .set('Content-Type', 'text/plain')
             .end(function(err, res){
                 console.log(res.statusCode)
+                console.log(err)
             });
-
-/*        $.ajax({
-            crossOrigin: true,
-            url: 'http://localhost:8084/login',
-            success: function(data) {
-                console.log(data);
-            }
-        });*/
     },
 
     render() {
 
         return (
             <div>
-                <button onClick = {this.handleGetVirts} ></button>
+                <button onClick = {this.handleGetVirts} >getDeployments</button>
             </div>
         );
     }
