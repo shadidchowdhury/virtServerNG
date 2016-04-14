@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import request from 'superagent'
-import jsonp from 'superagent-jsonp'
 var Container = React.createClass({
 
     handleGetVirts: function() {
@@ -20,7 +19,7 @@ var Container = React.createClass({
         //    });
 
         request
-            .get('http://localhost:8084/login')
+            .get('http://localhost:3000/login')
             //.set('Access-Control-Allow-Origin', '*')
             //.set('Access-Control-Allow-Headers', 'X-Requested-With')
             .end(function(err, res){
