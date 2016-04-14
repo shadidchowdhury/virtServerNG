@@ -1,0 +1,22 @@
+{
+  "name": "virtserverng",
+  "version": "1.0.0",
+  "description": "Next generation virtServer",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/shadidchowdhury/virtServerNG.git"
+  },
+  "keywords": [
+    "virtserver"
+  ],
+  "author": "SmartBear AB",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shadidchowdhury/virtServerNG/issues"
+  },
+  "homepage": "https://github.com/shadidchowdhury/virtServerNG#readme"
+}
