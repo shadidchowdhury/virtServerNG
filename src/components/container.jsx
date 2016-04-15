@@ -66,7 +66,7 @@ var Container = React.createClass({
                 "order": 2,
                 "locked": false,
                 "visible": true,
-                "displayName": "Virt"
+                "displayName": "Virt Name"
             },
             {
                 "columnName": "userId",
@@ -81,7 +81,7 @@ var Container = React.createClass({
                 "order":  1,
                 "locked": false,
                 "visible": true,
-                "displayName": "Running",
+                "displayName": "Status",
                 "sortable": false,
                 "customComponent": StartStopButton
             },
@@ -109,8 +109,8 @@ var Container = React.createClass({
             {
                 "deploymentID": 1,
                 "title": "REST virt",
-                "userId": "Kapowsin",
-                "running": true,
+                "userId": "Calvin",
+                "running": false,
                 "url": "http://vserver:8090",
                 "port": 8090
             },
@@ -122,6 +122,102 @@ var Container = React.createClass({
                "url": "http://168.2.10.21:8092",
                "port": 8092
            },
+           {
+               "deploymentID": 3,
+               "title": "REST virt 2",
+               "userId": "Sofiia",
+               "running": false,
+               "url": "http://vserver:8090",
+               "port": 8090
+           },
+           {
+               "deploymentID": 4,
+               "title": "FB virt",
+               "userId": "Gustav",
+               "running": false,
+               "url": "http://168.2.10.21:8092",
+               "port": 8092
+           },
+           {
+               "deploymentID": 5,
+               "title": "REST virt",
+               "userId": "Mark",
+               "running": true,
+               "url": "http://vserver:8090",
+               "port": 8090
+           },
+           {
+               "deploymentID": 6,
+               "title": "WSDL virt",
+               "userId": "Dinuskha",
+               "running": true,
+               "url": "http://168.2.10.21:8092",
+               "port": 8092
+           },
+           {
+               "deploymentID": 7,
+               "title": "REST virt",
+               "userId": "Kapowsin",
+               "running": true,
+               "url": "http://vserver:8090",
+               "port": 8090
+           },
+           {
+               "deploymentID": 8,
+               "title": "WSDL virt",
+               "userId": "Shadid",
+               "running": true,
+               "url": "http://168.2.10.21:8092",
+               "port": 8094
+           },
+           {
+               "deploymentID": 9,
+               "title": "Maps",
+               "userId": "Calvin",
+               "running": true,
+               "url": "http://vserver:8090",
+               "port": 8096
+           },
+           {
+               "deploymentID": 10,
+               "title": "TRE",
+               "userId": "Calvin",
+               "running": true,
+               "url": "http://168.2.10.21:8092",
+               "port": 8095
+           },
+           {
+               "deploymentID": 11,
+               "title": "REST virt4",
+               "userId": "Kapowsin",
+               "running": false,
+               "url": "http://vserver:8090",
+               "port": 9091
+           },
+           {
+               "deploymentID": 12,
+               "title": "Account System",
+               "userId": "Calvin",
+               "running": true,
+               "url": "http://168.2.10.21:8092",
+               "port": 9093
+           },
+           {
+               "deploymentID": 13,
+               "title": "REST virt",
+               "userId": "Kapowsin",
+               "running": true,
+               "url": "http://vserver:8090",
+               "port": 9090
+           },
+           {
+               "deploymentID": 14,
+               "title": "WSDL virt",
+               "userId": "Mark",
+               "running": true,
+               "url": "http://168.2.10.21:8092",
+               "port": 8099
+           }
         ];
         return (
             <div>
