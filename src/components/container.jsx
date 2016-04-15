@@ -3,6 +3,7 @@ import request from 'superagent'
 import jsonp from 'superagent-jsonp'
 import Griddle from 'griddle-react';
 import StartStopButton from './startStop.jsx'
+import LinkComponent from './LinkComponent.jsx'
 import { List } from 'immutable';
 
 
@@ -55,41 +56,51 @@ var Container = React.createClass({
         var columnMeta = [
             {
                 "columnName": "deploymentID",
-                "order": 1,
+                "order": 7,
                 "locked": false,
                 "visible": true,
                 "displayName": "ID"
             },
             {
-                "columnName": "virtItem.title",
+                "columnName": "title",
                 "order": 2,
                 "locked": false,
-                "visible": true
+                "visible": true,
+                "displayName": "Virt"
             },
             {
                 "columnName": "userId",
                 "order": 3,
                 "locked": false,
                 "visible": true,
-                "sortable": false,
-                "displayName": "name"
+                "displayName": "User",
+                "sortable": false
             },
             {
-                "columnName": "virtItem.running",
-                "order":  4,
+                "columnName": "running",
+                "order":  1,
                 "locked": false,
                 "visible": true,
-                "displayName": "Favorite Number",
+                "displayName": "Running",
                 "sortable": false,
                 "customComponent": StartStopButton
             },
             {
-                "columnName": "virtItem.PropertiesMap.port",
+                "columnName": "port",
                 "order":  5,
                 "locked": false,
                 "visible": true,
                 "displayName": "Port",
-                "sortable": true,
+                "sortable": true
+            },
+            {
+                "columnName": "url",
+                "order":  6,
+                "locked": false,
+                "visible": true,
+                "displayName": "URL",
+                "sortable": false,
+                "customComponent": LinkComponent
             }
 
     ];
@@ -97,24 +108,25 @@ var Container = React.createClass({
        var  fakeData =   [
             {
                 "deploymentID": 1,
-                "virtItem.title": "REST virt",
+                "title": "REST virt",
                 "userId": "Kapowsin",
-                "virtItem.running": true,
-                "virtItem.PropertiesMap.port": 8090
+                "running": true,
+                "url": "http://vserver:8090",
+                "port": 8090
             },
            {
                "deploymentID": 2,
-               "virtItem.title": "WSDL virt",
+               "title": "WSDL virt",
                "userId": "Shadid",
-               "virtItem.running": true,
-               "virtItem.PropertiesMap.port": 8091
+               "running": true,
+               "url": "http://168.2.10.21:8092",
+               "port": 8092
            },
         ];
         return (
             <div>
-                <button onClick = {this.handleUpdateVirts} >getDeployments</button>
                 <Griddle results={fakeData} tableClassName="table" showFilter={true} columnMetadata={columnMeta}
-                         showSettings={true} columns={["userId", "virtItem.title", "virtItem.running"]}/>
+                         showSettings={true} columns={["running", "userId", "title",  "url"]}/>
             </div>
         );
     }
